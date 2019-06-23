@@ -1,0 +1,18 @@
+<div class="">
+    <button type="button" class="btn btn-success" (click)="updateJson()" [disabled]="!isJson || !isValidName">Update</button>
+    <a routerLink="/" class="btn btn-info">List</a>
+</div>
+<br>
+<div *ngIf="!isValidName" class="alert-danger">
+    <p>Invalid Entity Name</p>
+</div>
+<div *ngIf="!isJson" class="alert-danger">
+    <p>Invalid Json</p>
+</div>
+<div class="form-group">
+    <label for="entityLabel">Entity Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="entityNameNew" (input)="isValidEntityName()">
+
+</div>
+<ace-editor [(text)]="code" mode="json" style="height:400px;"></ace-editor>
+<!-- [durationBeforeCallback]="1000" -->

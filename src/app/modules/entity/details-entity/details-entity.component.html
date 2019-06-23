@@ -1,0 +1,9 @@
+<a routerLink="/" class="btn btn-info">List</a>
+<br>
+<div class="form-group">
+    <label for="entityLabel">Entity Name:</label>
+    <input type="text" class="form-control" disabled="true" value="{{entityNameNew}}">
+
+</div>
+<ace-editor [readOnly]="true" [theme]="'eclipse'" [(text)]="code" mode="json" style="height:400px;" [durationBeforeCallback]="1000"></ace-editor>
+<!-- [durationBeforeCallback]="1000" -->

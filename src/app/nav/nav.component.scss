@@ -1,0 +1,35 @@
+header {
+    background: #7700FF;
+    .logo {
+        font-weight: bold;
+    }
+    nav {
+        justify-self: right;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            li {
+                float: left;
+                a {
+                    padding: 1.5em;
+                    text-transform: uppercase;
+                    font-size: .8em;
+                    &:hover {
+                        background: #8E2BFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1E8396;
+    color: white;
+    text-align: center;
+}
