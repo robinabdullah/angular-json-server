@@ -1,7 +1,7 @@
 #Links
-Api Link `http://172.16.26.155:9050`
+Api Link ``
 
-FrontEnd `Link http://172.16.26.155:9051`
+FrontEnd ``
 
 # AngularJsonServer
 
