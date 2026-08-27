@@ -1,32 +1,30 @@
-#Links
-Api Link ``
+# angular-json-server
 
-FrontEnd ``
+A browser UI for a [json-server](https://github.com/typicode/json-server) mock API. json-server
+gives you a REST API from a JSON file in seconds; this puts a front end on it, so you can edit the
+fake data without hand-editing `db.json` while you are working.
 
-# AngularJsonServer
+## What it does
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+- **CRUD over entities** — list, view, add and edit records, with sortable and searchable tables
+- **JSON editor** — edit the backing file in the browser through an embedded editor
+- **JSON viewer** — read the whole document as a collapsible tree
+- **Help page** — usage notes for whoever picks it up
 
-## Development server
+## How it is put together
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Feature modules with their own routing (`modules/entity`, `modules/json-file`), a shared
+`JsonDataService` in `core/services` wrapping `HttpClient` with centralised error handling, and the
+save endpoint read from `environment.fileSaveUrl` rather than hard-coded. Unit specs sit beside each
+component; end-to-end specs live under `e2e/`.
 
-## Code scaffolding
+## Built with
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Angular · TypeScript · RxJS · Bootstrap · json-server · Express
 
-## Build
+## Running it
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+npm install
+npm run json-server   # mock API on :3000
+npm start             # UI on :4200
