@@ -28,7 +28,7 @@
     "datatables.net": "^1.10.19",
     "datatables.net-dt": "^1.10.19",
     "edit-json-file": "^1.2.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "file-system": "^2.2.2",
     "http-server": "^0.11.1",
     "jquery": "^3.4.1",
